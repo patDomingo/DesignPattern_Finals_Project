@@ -1,0 +1,475 @@
+a, p, span, h2, h4, button{
+    font-family: 'MuseoModerno', cursive;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    max-height: 50px;
+    background-color: #ff3434;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 850px){
+    nav{
+        max-height: 100px;
+    }
+}
+
+.active{
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+}
+
+.logo > p{
+    color: white;
+    margin: 0;
+    font-size: 36px;
+    border: none;
+    border-color: white;
+    margin-right: 50px;
+
+    text-align: center;
+    transform: none;
+    transition: color 1s ease-in-out;
+}
+
+.logo > p:hover{
+    cursor: pointer;
+    color: black;
+}
+
+nav > .nav-links{
+    width: 100px;
+    align-self: center;
+    text-align: center;
+}
+
+nav > .nav-links > a{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 20px;
+
+    color: white;
+    transition: color 1s ease;
+}
+
+nav > .nav-links > a:hover{
+    color: black;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+}
+
+.hero-image {
+    background-image: url(images/hero-image.jpg);
+    height: 500px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-button{
+	height: 100%;
+	opacity: 0;
+	width: 99%;
+}
+
+.barrier{
+    width: 100%;
+    margin: 80px 0px 20px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.barrier-line{
+    border-bottom: black 1px solid;
+    width: 50%;
+    opacity: 50%;
+}
+
+section{
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.newsContainer{
+    width: 45%;
+    padding: 20px;
+}
+
+.newsContainer > p, h2, h4, img{
+    width: 100%;
+}
+
+.newsContainer > img{
+    border-radius: 10px;
+    opacity: 0.75;
+    transition: all .5s ease-in-out;
+}
+
+.newsContainer:hover > img{
+    opacity: 1;
+}
+
+.newsContainer > h4::after{
+    transition: all .5s ease-in-out;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 1s;
+}
+
+.newsContainer:hover > h4{
+    color: #ff3434;
+}
+
+.newsContainer:hover > h4::after{
+    width: 80%;
+    background: #ff3434;
+}
+
+.newsContainer:hover button{
+	background-color: #ff3434;
+}
+
+@media (max-width: 900px){
+    .newsContainer{
+        margin-bottom: 30px;
+    }
+}
+
+.hotSellersContainer{
+    width: 300px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hotSellersContainer > p, img{
+    width: 100%;
+}
+
+.hotSellersContainer > img{
+    max-height: 150px;
+    border-radius: 10px;
+
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.hotSellersContainer:hover > img{
+    opacity: 0.80;
+}
+
+.hotSellersContainer:hover button{
+  	background-color: #ff3434;
+}
+
+.hotSellersContainer > h4::after{
+    transition: all .5s ease-in-out;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 1s;
+}
+
+.hotSellersContainer:hover > h4{
+    color: #ff3434;
+    transition: all 1s ease;
+}
+
+.hotSellersContainer:hover > h4::after{
+    width: 70%;
+    background: #ff3434;
+}
+
+section > a > span{
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    color: #ff3434;
+}
+
+section > a > span:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 900px){
+    .hotSellersContainer{
+        margin-top: 40px;
+    }
+    
+}
+
+.gamesMaxContainer{
+    width: 45%;
+    padding: 20px;
+    color: black;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.gamesMinContainer{
+    width: 23%;
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.gamesMaxContainer > p, img{
+    width: 100%;
+    text-align: center;
+}
+
+.gamesMinContainer > p, img{
+    width: 100%;
+    text-align: center;
+}
+
+.gamesMinContainer > .img-hover-zoom > img{
+    max-height: 150px;
+}
+
+.crunchSection{
+    justify-content: center;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+  
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+    transition: transform 1s ease;
+}
+  
+/* [3] Finally, transforming the image when container gets hovered */
+.gamesMaxContainer:hover img {
+    transform: scale(1.1);
+}
+
+.gamesMinContainer:hover img {
+    transform: scale(1.1);
+}
+
+button{
+    background-color: none;
+    border: solid 1px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    transition: background-color 1s ease-in-out;
+}
+
+.gamesMaxContainer:hover button{
+    background-color: #ff3434;
+}
+
+.gamesMinContainer:hover button{
+    background-color: #ff3434;
+}
+
+@media(max-width: 900px){
+    .gamesMaxContainer, .gamesMinContainer{
+        width: 60%;
+    }
+    .gamesMaxContainer > .img-hover-zoom > img, .gamesMinContainer > .img-hover-zoom > img{
+        max-height: 250px;
+    }
+}
+
+.backgroundColor{
+    width: 100%;
+    max-height: 250px;
+    background-color: gray;
+    padding-left: 30px;
+}
+
+.sectionPaddingless{
+    padding: 0;
+}
+
+.viewProductDetailsContainer{
+    width: 50%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    margin-top: 50px;
+
+    border: solid 1px;
+}
+
+.viewProductDetailsContainer > h4{
+    width: 100%;
+    text-align: center;
+}
+
+.viewProductDetailsContainer:hover button{
+    background-color: #ff3434;
+}
+
+/* CART CSS */
+
+:root {
+    --container-background: #273349;
+    --table-background: #1c223b;
+    --table-background-hover: #151b31;
+    --table-text: #e2e2e2;
+    --priority-600: #40c587;
+    --delete-background: #242c4c;
+    --delete-color: #909090;
+    --delete-hover: #ff3434;
+}
+
+/* START OUTER CONTAINER STYLES */
+.outer-container {
+    background-color: var(--container-background);
+    border-radius: 0.625rem;
+    border: solid 1px black;
+    box-shadow: 0 5px 10px rgba(12,16,31,0.4);
+    padding: 6.25rem;
+    margin: auto;
+    width: 90%;
+    max-width: 62.5rem;
+}
+
+.outer-container button{
+    float: right;
+}
+
+.outer-container button:hover{
+    background-color: #ff3434;
+}
+
+/* Start Table Styles */
+table {
+    color: var(--table-text);
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    width: 100%;
+}
+table th {
+    font-size: 1rem;
+    color: white;
+}
+table th, table td {
+    padding: 0.9375rem;
+    text-align: left;
+}
+table tbody tr {
+    background-color: var(--table-background);
+}
+table tbody tr:hover {
+    background-color: var(--table-background-hover);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+table tbody tr td:first-of-type {
+    border-top-left-radius: 0.3125rem;
+    border-bottom-left-radius: 0.3125rem;
+}
+table tbody tr td:last-of-type {
+    border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    text-align: center;
+}
+table tbody tr.priority-600 td:first-of-type {
+    border-left: 0.3125rem solid var(--priority-600);
+}
+table tbody tr td .fa-circle {
+    transform: scale(0.7);
+}
+table tbody tr.priority-600 td .fa-circle {
+    color: var(--priority-600);
+}
+.delete-btn {
+    cursor: pointer;
+    background-color: var(--delete-background);
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.125rem;
+    color: var(--delete-color);
+    font-size: 1.1rem;
+    opacity: 0.2;
+    padding: 0.3125rem 0.625rem;
+}
+.delete-btn:hover {
+    color: var(--delete-hover);
+}
+.delete-btn:focus {
+  outline: 0;
+}
+table tbody tr:hover .delete-btn {
+    opacity: 1;
+}
+/* End Table Styles */
+/* END OUTER CONTAINER STYLES */
+
+
+/* KEYFRAMES */
+/* Fade In Webpage Keyframe */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* MEDIA QUERIES */
+@media(max-width: 768px) {
+    .outer-container {
+        padding: 1.25rem;
+    }
+    h1 {
+        margin: 0;
+    }
+}
+
+/* END OF CART CSS */
+
+.cartTable{
+
+}
+
+footer{
+
+}
